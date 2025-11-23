@@ -1,0 +1,49 @@
+@startuml Service Publication with External Contract Reference
+title Service Publication with External Contract Reference
+header Figure 1: Service Publication Delegation Flow
+
+skinparam sequenceBoxBorderColor #transparent
+skinparam boxPadding 50
+autonumber
+
+box "API Provider (Delegatee)" #LightBlue
+    participant "Manager" as ProviderManager
+end box
+
+box "Directory" #LightGreen
+    participant "Manager" as DirectoryManager
+end box
+
+note over ProviderManager
+    API Provider acts on behalf
+    of Delegator organization
+    based on external contract
+end note
+
+ProviderManager -> ProviderManager: Create ServicePublicationGrant\nwith external_contract_reference\n(delegator_id, delegator_name, reference)
+
+ProviderManager -> DirectoryManager: Send Contract with\nServicePublicationGrant
+
+note over DirectoryManager
+    Manual validation of
+    external contract reference
+    (out of scope for automation)
+end note
+
+DirectoryManager -> DirectoryManager: Validate external contract\nreference and delegator authority
+
+alt Validation successful
+    DirectoryManager -> DirectoryManager: Sign Contract
+    DirectoryManager -> ProviderManager: Return signed Contract
+
+    ProviderManager -> ProviderManager: Sign Contract\n(Contract becomes valid)
+
+    note over ProviderManager, DirectoryManager
+        Service is now published in Directory
+        on behalf of Delegator organization
+    end note
+else Validation failed
+    DirectoryManager -> ProviderManager: Reject Contract
+end
+
+@enduml
