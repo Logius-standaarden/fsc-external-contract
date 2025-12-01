@@ -115,4 +115,4 @@ The Inway **MUST** include external contract reference properties in transaction
 
 ## Outway 
 
-The Inway **MUST** include external contract reference properties in transaction log records as `additional_data` when the Transaction log extension is used
+The Outway **MUST** include external contract reference properties in transaction log records as `additional_data` when the Transaction log extension is used
