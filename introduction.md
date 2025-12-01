@@ -6,11 +6,11 @@ The external contract reference specification is an extension of the Federated S
 
 In delegation as defined by FSC Core, the *delegator* organization MUST use a FSC Manager to create and sign Contracts. This extension addresses scenarios where the delegator lacks the technical capability to operate FSC infrastructure, allowing a *delegatee* (API provider or consumer) to act on their behalf based on an external contract.
 
-## Overall Operation of external controct reference
+## Overall Operation of external contract reference
 
-An API provider creates a Contract for publishing a Service on behalf of another organisation. In this Contract the API provider adds a reference to an existing (paper) contract. The Contract is received by the Peer acting as Directory. The Peer validates the reference manually. The validation itself is out of scope for this extension. The Contract is accepted and the Service is published on behalf of the organisation specified in the reference. The validation of the contract is out of scope for this extension.
+An API provider creates a Contract for publishing a Service on behalf of another organisation. In this Contract the API provider adds a reference to an existing (paper) contract. The Contract is received by the Peer acting as Directory. The Peer validates the reference manually or automatically, outside FSC with a custom component. The validation itself is out of scope for this extension. The Contract is accepted and the Service is published on behalf of the organisation specified in the reference. The validation of the contract is out of scope for this extension.
 
-An API consumer creates a Contract for consuming a Service on behalf of another organisation. In this Contract the API consumer adds a reference to an existing (paper) contract. The Contract is received by the API provider. The API provider validates the reference manually. After validation the Contract is accepted and the API consumer can consume the Service on behalf of the organisation specified in the reference. The validation of the contract is out of scope for this extension.
+An API consumer creates a Contract for consuming a Service on behalf of another organisation. In this Contract the API consumer adds a reference to an existing (paper) contract. The Contract is received by the API provider. The API provider validates the reference manually or automatically, outside FSC with a custom component. After validation the Contract is accepted and the API consumer can consume the Service on behalf of the organisation specified in the reference. The validation of the contract is out of scope for this extension.
 
 
 ## Terminology

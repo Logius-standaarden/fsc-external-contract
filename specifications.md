@@ -3,7 +3,7 @@
 ## Properties for an exteral contract reference
 
 The external contract reference can be added to the ServiceConnectionGrant and ServicePublicationGrant using properties.
-The Grants and properties are both defined in FSC Core.
+The Grants and properties are both defined in [FSC Core](https://gitdocumentatie.logius.nl/publicatie/fsc/core/).
 
 ### ServiceConnectionGrant
 
@@ -12,9 +12,9 @@ The Grants and properties are both defined in FSC Core.
 * *reference(string):*  
   The reference to the contract. Must be a string. Example shown uses a URL, but any string value is valid
 * *delegator_id(string):*
-  The ID of the Delegator that as delegated the autorisation to publish the Service
+  The ID of the Delegator that has delegated the autorisation to publish the Service
 * *delegator_name(string):*
-  The name of the Delegator that as delegated the autorisation to publish the Service
+  The name of the Delegator that has delegated the autorisation to publish the Service
 
 Example:
 ```json
@@ -34,9 +34,9 @@ Example:
 * *reference(string):*  
   The reference to the contract. Must be a string. Example shown uses a URL, but any string value is valid
 * *delegator_id(string):*
-  The ID of the Delegator that as delegated the autorisation to publish the Service
+  The ID of the Delegator that has delegated the autorisation to publish the Service
 * *delegator_name(string):*
-  The name of the Delegator that as delegated the autorisation to publish the Service
+  The name of the Delegator that has delegated the autorisation to publish the Service
 
 Example:
 ```json
@@ -44,7 +44,7 @@ Example:
     "delegation.publication.external_contract_reference": {
         "reference": "https://linktocontract.com/1",
         "delegator_id": "12345678901234567890",
-        "delegator_name": "Example organization"
+        "delegator_name": "Example organisation"
     }
 }
 ```
