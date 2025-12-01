@@ -21,6 +21,9 @@ In this Contract the API consumer adds a reference to an existing (paper) contra
 The Contract is received by the API provider. The API provider validates the reference manually or automatically, outside FSC with a custom component.
 After validation the Contract is accepted and the API consumer can consume the Service on behalf of the organization specified in the reference.
 
+## Caveat
+
+This extension is developed as a temporary solution because external contracts defined in this extension cannot be validated by FSC components. This breaks the trust. In the future, this extension will be replaced by an extension that allows Delegators to sign contracts in a cryptographically secure manner without having to use an FSC Manager.
 
 ## Terminology
 
