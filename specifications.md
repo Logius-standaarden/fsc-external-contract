@@ -16,6 +16,8 @@ The Grants and Properties are both defined in [FSC Core](https://gitdocumentatie
 * *delegator_name(string):*
   The name of the Delegator that has delegated the authorisation to publish the Service
 
+All properties are required when using the `delegation.connection.external_contract_reference` object.
+
 Example:
 ```json
 {
@@ -37,6 +39,8 @@ Example:
   The ID of the Delegator that has delegated the authorisation to publish the Service
 * *delegator_name(string):*
   The name of the Delegator that has delegated the authorisation to publish the Service
+
+All properties are required when using the `delegation.publication.external_contract_reference` object.
 
 Example:
 ```json
