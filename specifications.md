@@ -1,20 +1,20 @@
 # Specification
 
-## Properties for an exteral contract reference
+## Properties for an External Contract Reference
 
-The external contract reference can be added to the ServiceConnectionGrant and ServicePublicationGrant using properties.
-The Grants and properties are both defined in [FSC Core](https://gitdocumentatie.logius.nl/publicatie/fsc/core/).
+The External Contract Reference can be added to the `ServiceConnectionGrant` and `ServicePublicationGrant` using Properties.
+The Grants and Properties are both defined in [FSC Core](https://gitdocumentatie.logius.nl/publicatie/fsc/core/).
 
 ### ServiceConnectionGrant
 
 * *delegation.connection.external_contract_reference(object):*
-  The object that contains the delegation information in case of a ServiceConnectionGrant
+  The object that contains the delegation information
 * *reference(string):*  
   The reference to the contract. Must be a string. Example shown uses a URL, but any string value is valid
 * *delegator_id(string):*
-  The ID of the Delegator that has delegated the autorisation to publish the Service
+  The ID of the Delegator that has delegated the authorisation to publish the Service
 * *delegator_name(string):*
-  The name of the Delegator that has delegated the autorisation to publish the Service
+  The name of the Delegator that has delegated the authorisation to publish the Service
 
 Example:
 ```json
@@ -30,13 +30,13 @@ Example:
 ### ServicePublicationGrant
 
 * *delegation.publication.external_contract_reference(object):*
-  The object that contains the delegation information in case of a ServiceConnectionGrant
+  The object that contains the delegation information
 * *reference(string):*  
   The reference to the contract. Must be a string. Example shown uses a URL, but any string value is valid
 * *delegator_id(string):*
-  The ID of the Delegator that has delegated the autorisation to publish the Service
+  The ID of the Delegator that has delegated the authorisation to publish the Service
 * *delegator_name(string):*
-  The name of the Delegator that has delegated the autorisation to publish the Service
+  The name of the Delegator that has delegated the authorisation to publish the Service
 
 Example:
 ```json
@@ -51,7 +51,7 @@ Example:
 
 ## Transaction log
 
-In Groups that use the [Transaction log extension](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) the external contract reference properties **MUST** be logged in the transaction log.
+In Groups that use the [Transaction log extension](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) the External Contract Reference properties **MUST** be logged in the transaction log.
 
 The properties **MUST** be stored as `additional_data`.
 
@@ -83,9 +83,10 @@ Example Transaction Log record:
 
 ## Access token
 
-The external contract reference properties are added to the Access Token. FSC Core defines that propereties added to a Grant **MUST** be added the access token as the `prp` claim. 
+The External Contract Reference properties are added to the Access Token. FSC Core defines that properties added to a Grant **MUST** be added the access token as the `prp` claim.
 
-Example access token bases on a ServiceConnectionGrant with an external contract reference.
+Example access token bases on a `ServiceConnectionGrant` with an External Contract Reference.
+
 ```json
 {
     "gid": "fsc.group.example.id",
@@ -111,8 +112,8 @@ Example access token bases on a ServiceConnectionGrant with an external contract
 
 ## Inway 
 
-The Inway **MUST** include external contract reference properties in transaction log records as `additional_data` when the Transaction log extension is used
+The Inway **MUST** include External Contract Reference properties in the Transaction Log records as `additional_data` when the Logging extension is used.
 
 ## Outway 
 
-The Outway **MUST** include external contract reference properties in transaction log records as `additional_data` when the Transaction log extension is used
+The Outway **MUST** include External Contract Reference properties in the Transaction Log records as `additional_data` when the Logging extension is used.
