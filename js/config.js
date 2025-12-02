@@ -6,7 +6,7 @@ let respecConfig = {
     specType: "ST",
     pubDomain: "fsc",
     shortName: "external-contract",
-    publishDate: "2024-12-12",
+    publishDate: "2025-12-11",
     publishVersion: "1.0.0",
 
     editors:

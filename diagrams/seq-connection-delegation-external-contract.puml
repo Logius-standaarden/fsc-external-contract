@@ -20,7 +20,7 @@ note over ConsumerManager
     based on external contract
 end note
 
-ConsumerManager -> ConsumerManager: Create ServiceConnectionGrant\nwith external_contract_reference\n(delegator_id, delegator_name, reference)
+ConsumerManager -> ConsumerManager: Create Contract with ServiceConnectionGrant\ncontaining Properties with the External Contract Reference\n(delegator_id, delegator_name, reference)
 
 ConsumerManager -> ConsumerManager: Sign Contract
 
@@ -34,8 +34,8 @@ end note
 ProviderManager -> ProviderManager: Validate external contract reference 
 
 alt Validation successful
-    ProviderManager -> ProviderManager: Sign Contract
-    ProviderManager -> ConsumerManager: Send accept signature
+    ProviderManager -> ProviderManager: Accept Contract
+    ProviderManager -> ConsumerManager: Return Contract with Accept Signature
 
     note over ConsumerManager, ProviderManager
         Consumer can now access service
