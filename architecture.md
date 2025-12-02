@@ -5,7 +5,7 @@ This chapter describes the architecture of an External Contract Reference.
 ## Trust and Validation Model
 
 The key architectural principle is **trust transfer**: the delegatee asserts authority to act on behalf of the delegator, backed by an external contract reference.
-The receiving party (Directory or API provider) performs manual validation of this assertion before accepting the Contract.
+The receiving party (Directory or API provider) performs validation of this assertion before accepting the Contract.
 
 ### Trust Relationships
 
@@ -27,7 +27,7 @@ When a Contract containing an *External Contract Reference* is received, the rec
 3. MUST verify that the delegator identity (delegator_id and delegator_name) matches the external contract
 4. SHOULD verify that the scope of delegation in the external contract covers the specific Service being published or consumed
 
-The validation process itself is **out of scope** for this extension and MUST be performed manually.
+The validation process itself is **out of scope** for this extension and MUST be performed manually or automatically by a component outside of FSC.
 
 If validation fails, the Contract MUST be rejected. If validation succeeds, the Contract follows the FSC Core Contract lifecycle rules.
 
@@ -48,7 +48,7 @@ When an API provider publishes a Service on behalf of a delegator organization, 
 
 2. **Contract Transmission**: The Manager of the API provider creates a Contract containing the `ServicePublicationGrant` and transmits it to the Manager of the Directory.
 
-3. **Manual Validation**: The Directory performs manual validation of the External Contract Reference according to the validation requirements in Section 2.2
+3. **Validation**: The Directory performs validation of the External Contract Reference according to the validation requirements in Section 2.2
 
 4. **Contract Acceptance or Rejection**:
    - If validation succeeds: The Directory accepts the Contract
@@ -61,7 +61,7 @@ When an API provider publishes a Service on behalf of a delegator organization, 
 ### Publication Architecture Implications
 
 The Directory MUST:
-- Include the `delegator_id` in Service discovery responses to indicate the true Service owner
+- Include the content of `delegation.publication.external_contract_reference` in the Service discovery responses to indicate the true Service owner
 - Maintain audit trails of validation decisions for external contract references
 
 ## Service Connection Delegation
@@ -81,7 +81,7 @@ When an API consumer consumes a Service on behalf of an organization, the follow
 
 2. **Contract Transmission**: The Manager of the API consumer creates a Contract containing the `ServiceConnectionGrant` and transmits it to the Manager of the API provider.
 
-3. **Manual Validation**: The API provider performs manual validation of the External Contract Reference according to the validation requirements in Section 2.2
+3. **Validation**: The API provider performs validation of the External Contract Reference according to the validation requirements in Section 2.2
 
 4. **Contract Acceptance or Rejection**:
    - If validation succeeds: The API provider signs the Contract and returns it to the API consumer

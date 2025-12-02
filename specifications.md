@@ -55,9 +55,7 @@ Example:
 
 ## Transaction log
 
-In Groups that use the [Transaction log extension](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) the External Contract Reference properties **MUST** be logged in the transaction log.
-
-The properties **MUST** be stored as `additional_data`.
+In Groups that use the [Transaction log extension](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) the External Contract Reference properties **MUST** be stored as `additional_data` in the transaction log.
 
 Example Transaction Log record:
 ```json
