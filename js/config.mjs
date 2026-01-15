@@ -4,12 +4,13 @@ loadRespecWithConfiguration({
     useLogo: true,
     useLabel: true,
     license: "cc-by",
-    specStatus: "CV",
+    specStatus: "WV",
     specType: "ST",
     pubDomain: "fsc",
     shortName: "external-contract",
-    publishDate: "2026-01-19",
+    publishDate: "2025-12-11",
     publishVersion: "1.0.0",
+    previousPublishVersion: [],
 
     editors:
         [
@@ -60,3 +61,4 @@ loadRespecWithConfiguration({
         ],
     github: "https://github.com/Logius-standaarden/fsc-external-contract",
 });
+
