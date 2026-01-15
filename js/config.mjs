@@ -59,6 +59,7 @@ loadRespecWithConfiguration({
                 ]
             },
         ],
-    github: "https://github.com/Logius-standaarden/fsc-external-contract",
+    github: "https://github.com/Logius-standaarden/fsc-external-contract-reference",
 });
+
 
