@@ -37,7 +37,7 @@ If validation fails, the Contract MUST be rejected. If validation succeeds, the 
 
 When an API provider publishes a Service on behalf of a delegator organization, the following architectural flow is executed:
 
-![Publication Delegation Flow](diagrams/seq-publication-delegation-external-contract.puml "Figure 1: Service Publication Delegation Flow")
+![Publication Delegation Flow](media/seq-publication-delegation-external-contract.svg "Figure 1: Service Publication Delegation Flow")
 
 **Step-by-step process:**
 
@@ -70,7 +70,7 @@ The Directory MUST:
 
 When an API consumer consumes a Service on behalf of an organization, the following architectural flow is executed:
 
-![Connection Delegation Flow](diagrams/seq-connection-delegation-external-contract.puml "Figure 2: Service Connection Delegation Flow")
+![Connection Delegation Flow](media/seq-connection-delegation-external-contract.svg "Figure 2: Service Connection Delegation Flow")
 
 **Step-by-step process:**
 
