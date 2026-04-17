@@ -1,11 +1,11 @@
 import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
 
 loadRespecWithConfiguration({
-    specStatus: "CV",
+    specStatus: "DEF",
     specType: "ST",
     pubDomain: "fsc",
     shortName: "ext",
-    publishDate: "2026-01-19",
+    publishDate: "2026-04-21",
     publishVersion: "1.0.0",
     previousPublishVersion: [],
 
@@ -14,7 +14,7 @@ loadRespecWithConfiguration({
             {
                 name: "Logius",
                 company: "Logius",
-                companyURL: "https://github.com/Logius-standaarden",
+                companyURL: "https://www.logius.nl",
             }
         ],
     authors:
@@ -53,5 +53,6 @@ loadRespecWithConfiguration({
         ],
     github: "https://github.com/Logius-standaarden/fsc-external-contract",
 });
+
 
 
